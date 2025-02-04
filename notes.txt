@@ -98,3 +98,28 @@ function name(){
 }
 чтобы вызвать:
 name();
+
+
+Стрелочные функции
+(параметр1, параметр2) => тело функции
+для одно параметра скоюки не нужны:
+параметр => тело функции
+
+перепишем функцию в стрелочную:
+function doingStuff(x){
+    console.log(x)
+}
+let doingArrowStuff = x => console.log(x);
+doingArrowStuff("Great")
+
+-----------------------оператор spread---------------------------------
+Это три точки, используемые перед ссылочным выражением или сторой 
+Let sread = ['so', 'much', 'fun'];
+let message = ['JS', 'is', ...spread, 'and', 'very', 'powerful'];
+
+-----------------------параметр rest------------------------------------
+function someFunction(param1, ...param2){
+    console.log(param1, param2)
+}
+someFunction('hy', there!', 'How are you?');
+
