@@ -133,3 +133,9 @@ Immaediately Invoked Function Expresion(IIFE)
 (function(){
     console.log('IIFE')
 })()
+
+
+
+------------Глава 9-----------------------
+BOM(Browser Object Model) - объектная модель браузера, позволяет JS взаимодейстовать с браузером.
+
