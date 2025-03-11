@@ -1,33 +1,30 @@
-
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Test</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="output"></div>
 
     <h1>Hello</h1>
     <div>Test</div>
     <ul>
-        <li id="one">One</li>
-        <li class="red">Two</li>
+      <li id="one">One</li>
+      <li class="red">Two</li>
     </ul>
     <div>Test</div>
 
     <script>
-        const mainList = document.querySelector('ul');
-        mainList.id = 'mainList';
-        console.log(mainList);
+      const mainList = document.querySelector("ul");
+      mainList.id = "mainList";
+      console.log(mainList);
 
-        const eles = document.querySelectorAll('div');
-        for (let x = 0; x < eles.length; x++) {
-            console.log(eles[x].tagName);
-            eles[x].id = 'id' + (x + 1);
-            eles[x].style.color = x % 2 ? 'red' : 'blue';
-        }
+      const eles = document.querySelectorAll("div");
+      for (let x = 0; x < eles.length; x++) {
+        console.log(eles[x].tagName);
+        eles[x].id = "id" + (x + 1);
+        eles[x].style.color = x % 2 ? "red" : "blue";
+      }
     </script>
-
-</body>
+  </body>
 </html>
