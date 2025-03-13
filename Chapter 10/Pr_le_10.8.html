@@ -7,7 +7,7 @@
     <div id="message"></div>
     <div id="output"></div>
     <script>
-      const message = document.querySelector("#message"); //не получилось
+      const message = document.querySelector("#message"); 
       const myArray = [
         "Laurence",
         "Mike",
@@ -19,7 +19,7 @@
         "Janet",
         "Jane",
       ];
-      build(); //почему функция вызывается прежде, чем ее объявили
+      build(); 
       function build() {
         let html = "<h1>My friends Table</h1><table>";
         myArray.forEach((item, index) => {
