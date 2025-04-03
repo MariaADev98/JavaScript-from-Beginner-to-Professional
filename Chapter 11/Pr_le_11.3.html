@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function message(str, obj) {
+        console.log(str);
+        console.log(obj)
+      }
+      window.onload = (e) =>{
+        message('Window Ready', e)
+      }
+      document.addEventListener("DOMContentLoaded", (e) =>{
+        message("Document Ready", e)
+      })
+    </script>
+  </body>
+</html>
