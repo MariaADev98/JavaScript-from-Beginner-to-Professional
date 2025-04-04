@@ -7,29 +7,26 @@
     <div class="myClass"></div>
     <script>
       const myClass = document.querySelector(".myClass");
-      myClass.textContent = 'hello world'
-      myClass.style.height = '200px'
-      myClass.style.weight = '400px'
-      myClass.style.backgroundColor = 'blue'
-      myClass.addEventListener('mousedown', function(e){
-        message('yellow', e)
-      })
-      myClass.addEventListener('mouseover', function(e){
-        message('pink', e)
-      })
-      myClass.addEventListener('mouseout', function(e){
-        message('white', e)
-      })
-      myClass.addEventListener('mouseup', function(e){
-        message('black', e)
-      })
-      function message(eColor, event){
-        console.log(event.type)
-        myClass.style.backgroundColor = eColor
-
+      myClass.textContent = "hello world";
+      myClass.style.height = "200px";
+      myClass.style.weight = "400px";
+      myClass.style.backgroundColor = "blue";
+      myClass.addEventListener("mousedown", function (e) {
+        message("yellow", e);
+      });
+      myClass.addEventListener("mouseover", function (e) {
+        message("pink", e);
+      });
+      myClass.addEventListener("mouseout", function (e) {
+        message("white", e);
+      });
+      myClass.addEventListener("mouseup", function (e) {
+        message("black", e);
+      });
+      function message(eColor, event) {
+        console.log(event.type);
+        myClass.style.backgroundColor = eColor;
       }
-
-
     </script>
   </body>
 </html>
