@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Tester</title>
+  </head>
+  <body>
+    <form action="anotherpage.html" method="get">
+      First: <input type="text"  name="First">
+      <br>Last: <input type="text"  name="Last">
+      <br>Age: <input type="number"  name="Age">
+      <br><input type="submit" value="submit">
+
+    </form>
+    <script>
+      const form = document.querySelector("form");
+      const email = document.querySelector("#email");
+      form.addEventListener("submit", (e) => {
+        let error = false;
+        const firstValue = form.elements['First'].value
+        const lastValue = form.elements['Last'].value
+        const ageValue = form.elements['Age'].value
+
+
+        if (checker(firstValue)) {
+          console.log("Enter first name");
+          error = true;
+        }
+
+        if (checker(lastValue)) {
+          console.log("Enter last name");
+          error = true;
+        }
+
+        if (ageValue < 19) {
+          console.log("You must be 19 or over");
+          error = true;
+        }
+
+        if (error) {
+          e.preventDefault();
+          console.log("Check the form");
+        }
+      });
+      function checker(val) {
+        console.log(val.length);
+        if (val.length < 6) {
+          return true;
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>
