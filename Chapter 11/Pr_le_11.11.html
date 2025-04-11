@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    div {
+      background-color: aqua;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+  </style>
+  <body>
+    <div id="block"></div>
+    <script>
+      const main = document.querySelector("#block");
+      let move = { speed: 10, dir: 1, pos: 0 };
+      main.addEventListener("click", moveBlock);
+      function moveBlock() {
+        let x = 30;
+        setInterval(function () {
+          if (x < 1) {
+            clearInterval();
+          } else {
+            if (move.pos > 800 || move.pos < 0) {
+              move.dir *= -1;
+            }
+            x--;
+            move.pos += x * move.dir;
+            main.style.left = move.pos + "px";
+            console.log(move.pos);
+          }
+        }, 2);
+      }
+    </script>
+  </body>
+  <head>
+    <title>Js Tester</title>
+  </head>
+  <body></body>
+</html>
