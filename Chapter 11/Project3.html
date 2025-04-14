@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .holder {
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        padding: 10px;
+      }
+      .active {
+        background-color: blanchedalmond;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="holder">
+      <div id="output"></div>
+    </div>
+    <script>
+      const el = document.querySelector(".holder");
+      el.addEventListener("mouseover", (e) => {
+        e.target.classList.add("active");
+      });
+      el.addEventListener("mouseout", (e) => {
+        e.target.classList.remove("active");
+      });
+      el.addEventListener("mousemove", coordin);
+      function coordin() {
+        let html = "X:" + event.clientX + " | Y:" + event.clentY;
+        document.getElementById("output").innerHTML = html;
+      }
+    </script>
+  </body>
+</html>
